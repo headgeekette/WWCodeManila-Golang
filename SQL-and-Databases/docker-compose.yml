@@ -17,7 +17,7 @@ services:
   #     - mariadb
 
   mariadb:
-    build: ./mariadb/.
+    build: ./database/.
     restart: always
     ports:
       - 3306:3306
