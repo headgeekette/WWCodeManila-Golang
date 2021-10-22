@@ -6,18 +6,18 @@
 | -------------------------------------------------------- | 
 | Saturday, October 23, 2021, 2:00 pm - 4:00 pm GMT+08:00  |
 
-## Build the mariadb Dockerfile
+## The `src` directory
 
-`$ docker build -t go-mariadb .`
+The sample code for the session can be found here.
 
-## Start `mariadb` server instance
+## The `database` directory
 
-`$ docker run -p 127.0.0.1:3306:3306  --name some-mariadb -e MARIADB_ROOT_PASSWORD=my-secret-pw -d go-mariadb:latest`
+We're using the Sakila database provided by MySQL. See the `README.md` in the `mariadb` folder.
 
-or
+## `.devcontainer` directory
 
-```
-$ docker network create some-network # Create the network
-$ docker run --net some-network --name some-mariadb -e MARIADB_ROOT_PASSWORD=my-secret-pw -d mariadb:tag
-```
+The `.devcontainer` is used for remote container development in Visual Studio Code. Feel free to use this if you would like a ready-to-code environment.
 
+See the `docker-compose.yml` file in this same directory if you would like to know how the environment has been configured.
+
+Please remember to install all the recommended Go extensions when Visual Studio Code prompts you to do so. You do not need to install the extensions for Docker and docker-compose.
